@@ -169,7 +169,7 @@ impl ExtensionStore {
             extensions_being_installed: Default::default(),
             extensions_being_uninstalled: Default::default(),
             reload_task: None,
-            wasm_host: WasmHost::new(http_client.clone(), node_runtime),
+            wasm_host: WasmHost::new(fs.clone(), http_client.clone(), node_runtime),
             wasm_extensions: Vec::new(),
             needs_reload: false,
             extension_changes: ExtensionChanges::default(),
